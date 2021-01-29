@@ -10,11 +10,11 @@ parser.add_argument('--simulation', type=str, default='charged',
                     help='What simulation to generate.')
 parser.add_argument('--name', type=str, default='new',
                     help='Add string to suffix of filename.')
-parser.add_argument('--num-train', type=int, default=50000,
+parser.add_argument('--num-train', type=int, default=10000,
                     help='Number of training simulations to generate.')
-parser.add_argument('--num-valid', type=int, default=10000,
+parser.add_argument('--num-valid', type=int, default=2000,
                     help='Number of validation simulations to generate.')
-parser.add_argument('--num-test', type=int, default=10000,
+parser.add_argument('--num-test', type=int, default=2000,
                     help='Number of test simulations to generate.')
 parser.add_argument('--length', type=int, default=5000,
                     help='Length of trajectory.')
@@ -24,11 +24,11 @@ parser.add_argument('--sample-freq', type=int, default=100,
                     help='How often to sample the trajectory.')
 parser.add_argument('--n-balls', type=int, default=5,
                     help='Number of balls in the simulation.')
-parser.add_argument('--seed', type=int, default=42,
+parser.add_argument('--seed', type=int, default=43,
                     help='Random seed.')
 parser.add_argument('--dim', type=int, default=3,
                     help='Spatial simulation dimension (2 or 3).')
-parser.add_argument('--boxsize', type=float, default=5.0,
+parser.add_argument('--boxsize', type=float, default=0,
                     help='Size of a surrounding box. If 0, then no box.')
 
 args = parser.parse_args()
