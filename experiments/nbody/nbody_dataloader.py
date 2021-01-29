@@ -90,7 +90,9 @@ class RIDataset(torch.utils.data.Dataset):
                 frame_0 = int((last_pssbl) / 2)
             elif self.FLAGS.ri_start_at == 'all':
                 frame_0 = int(last_pssbl/self.len*idx)
-        frame_T = frame_0 + self.FLAGS.ri_delta_t  # target frame
+        frame_0 = 30
+        frame_T = 40
+        #frame_T = frame_0 + self.FLAGS.ri_delta_t  # target frame
 
         x_0 = torch.tensor(self.data['points'][idx, frame_0].astype(DTYPE))
         x_T = torch.tensor(self.data['points'][idx, frame_T].astype(DTYPE)) - x_0
