@@ -34,7 +34,7 @@ class RIDataset(torch.utils.data.Dataset):
             _data_type = 'springs'
 
         assert split in ["test", "train"]
-        filename = 'ds_' + split + '_' + _data_type + '_3D_' + FLAGS.data_str
+        filename = 'ds_' + split + '_' + _data_type + '_3D_' + "new"
         filename = os.path.join(FLAGS.ri_data, filename + '.pkl')
 
         time_start = time.time()
